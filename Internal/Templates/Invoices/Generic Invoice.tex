@@ -1,0 +1,84 @@
+
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Invoice}
+\lhead{Tech Bytes Advice}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{Tech Bytes Advice}}\\[0.5em]
+    \textit{Website Hosting and Management Services}\\
+    \texttt{www.techbytesadvice.com} \\
+    \texttt{contact@techbytesadvice.com} \\
+    \texttt{+1 (555) 123-4567}
+\end{center}
+
+\vspace{1em}
+
+\noindent
+\textbf{Invoice To:} \\
+Client Name: \underline{\hspace{6cm}} \\
+Company: \underline{\hspace{6cm}} \\
+Email: \underline{\hspace{6cm}} \\
+Phone: \underline{\hspace{6cm}} \\
+
+\vspace{1em}
+
+\noindent
+\textbf{Invoice Number:} \underline{\hspace{2cm}} \\
+\textbf{Invoice Date:} \underline{\hspace{3cm}} \\
+\textbf{Due Date:} \underline{\hspace{3cm}} \\
+
+\vspace{1em}
+
+\begin{longtable}{|p{8cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Description} & \textbf{Unit Price} & \textbf{Total} \\
+\hline
+Website Hosting (Monthly) & \$\underline{\hspace{1cm}} & \$\underline{\hspace{1cm}} \\
+\hline
+Website Management & \$\underline{\hspace{1cm}} & \$\underline{\hspace{1cm}} \\
+\hline
+Domain Renewal & \$\underline{\hspace{1cm}} & \$\underline{\hspace{1cm}} \\
+\hline
+Other Services: \underline{\hspace{5cm}} & \$\underline{\hspace{1cm}} & \$\underline{\hspace{1cm}} \\
+\hline
+\textbf{Subtotal} & & \$\underline{\hspace{1cm}} \\
+\hline
+Tax (\%): \underline{\hspace{1cm}}\% & & \$\underline{\hspace{1cm}} \\
+\hline
+\textbf{Total Amount Due} & & \textbf{\$ \underline{\hspace{2cm}}} \\
+\hline
+\end{longtable}
+
+\vspace{2em}
+
+\noindent
+\textbf{Payment Instructions:} \\
+Bank Transfer to: Tech Bytes Advice \\
+Account Number: \underline{\hspace{5cm}} \\
+Sort Code: \underline{\hspace{3cm}} \\
+Reference: \texttt{Invoice \#\underline{\hspace{2cm}}}
+
+\vspace{2em}
+
+\noindent
+Thank you for your business! If you have any questions about this invoice, please contact us.
+
+\end{document}

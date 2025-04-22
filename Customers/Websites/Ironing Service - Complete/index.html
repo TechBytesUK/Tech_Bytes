@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmoothPress - Home Ironing Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #9b5de5;
+      --accent-color: #f15bb5;
+      --light-bg: #fff0f6;
+      --text-color: #320064;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to bottom right, #fbeaff, #e0f0ff);
+      color: var(--text-color);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      animation: floatIn 0.8s ease-out;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #4b0082;
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    h2 {
+      color: var(--main-color);
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      line-height: 1.8;
+      color: #5f3dc4;
+    }
+
+    ul li::before {
+      content: \"✨ \";
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea, button {
+      padding: 0.9rem;
+      font-size: 1rem;
+      border-radius: 0.75rem;
+      border: 2px solid #ddd;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--main-color);
+      outline: none;
+    }
+
+    button {
+      background: var(--accent-color);
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #d63384;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      color: #6a0dad;
+    }
+
+    .emoji {
+      font-size: 1.5rem;
+      display: inline-block;
+      transform: rotate(-10deg);
+    }
+
+    .tagline {
+      font-style: italic;
+      margin-top: -10px;
+      color: #8e44ad;
+    }
+  </style>
+</head>
+<body>
+
+  <h1><span class="emoji">🧺</span> SmoothPress</h1>
+  <p class="tagline">Turning wrinkles into giggles — one shirt at a time.</p>
+
+  <p>We pick it up. We press it. We bring it back wrinkle-free — all smiles included! 😄</p>
+
+  <div class="container">
+    <div class="card">
+      <h2>Why You'll ❤️ Us</h2>
+      <ul>
+        <li>Super fast 24-hour turnaround</li>
+        <li>Eco-friendly & gentle on fabrics</li>
+        <li>Pickup & delivery with a happy wave</li>
+        <li>Discounts for weekly customers!</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Say Hello 👋</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Tell us how we can make your day wrinkle-free!" required></textarea>
+        <button type="submit">Send a Smile 😄</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> SmoothPress. Ironing joy since 2024.
+  </footer>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+      alert(\"🎉 Thanks for reaching out! We'll get back to you soon.\");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
+
